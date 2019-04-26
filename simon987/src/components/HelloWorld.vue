@@ -8,8 +8,11 @@ import Grid from '../Grid';
 
 window.onload = () => {
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const size = urlParams.get('size');
+
     let grid = new Grid(
-        window.innerWidth < 1000 ? 20 : 30,
+        size ? size : window.innerWidth < 1000 ? 20 : 30,
         window.innerWidth < 1000 ? 80 : 40,
     );
     grid.setup();
