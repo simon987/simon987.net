@@ -1,16 +1,11 @@
-// import * as d3 from 'd3';
 import * as PIXI from 'pixi.js'
 import * as _ from 'lodash'
 
-function Grid(cellSize, tickLen) {
+function Grid(cellSize, tickLen, colScheme) {
 
-    // Light
-    this.c1 = 0xf9989f;
-    this.c2 = 0xfccb8f;
-    this.c3 = 0xc5f8c8;
-    // this.c1 = 0x3a3b52;
-    // this.c2 = 0x33284b;
-    // this.c3 = 0x2c2332;
+    this._c1 = colScheme.c1;
+    this._c2 = colScheme.c2;
+    this._c3 = colScheme.c3;
 
     this.seed = function () {
         this._cells = new Uint8Array(this._cellCount).map(() => {
@@ -28,10 +23,10 @@ function Grid(cellSize, tickLen) {
         this._pxWidth = window.innerWidth;
         this._pxHeight = window.innerHeight;
 
-        if (this.app) {
-            this.app.renderer.view.style.width = this._pxWidth + "px";
-            this.app.renderer.view.style.height = this._pxHeight + "px";
-            this.app.renderer.resize(window.innerWidth, window.innerHeight);
+        if (this._app) {
+            this._app.renderer.view.style.width = this._pxWidth + "px";
+            this._app.renderer.view.style.height = this._pxHeight + "px";
+            this._app.renderer.resize(window.innerWidth, window.innerHeight);
         }
 
         this._cellCountX = Math.ceil(this._pxWidth / cellSize);
@@ -40,15 +35,15 @@ function Grid(cellSize, tickLen) {
 
         this.seed();
 
-        this.xMap = _.range(0, this._cellCount).map(x => x % this._cellCountX);
-        this.xCoordsMap = this.xMap.map(x => x * cellSize);
-        this.yCoordsMap = _.range(0, this._cellCount)
+        this._xMap = _.range(0, this._cellCount).map(x => x % this._cellCountX);
+        this._xCoordsMap = this._xMap.map(x => x * cellSize);
+        this._yCoordsMap = _.range(0, this._cellCount)
             .map(y => Math.floor(y / this._cellCountX))
             .map(y => y * cellSize);
     };
 
-    this.g_TICK = tickLen;
-    this.g_Time = 0;
+    this._tickLen = tickLen;
+    this._tickTime = 0;
 
     this._cellSize = cellSize;
 
@@ -56,31 +51,33 @@ function Grid(cellSize, tickLen) {
 
         let elem = document.getElementById("grid");
 
-        this.app = new PIXI.Application({
+        this._app = new PIXI.Application({
             width: 0,
             height: 0,
             backgroundColor: 0xFFFFFF,
         });
 
-        elem.appendChild(this.app.view);
+        elem.appendChild(this._app.view);
 
         this._graphics = new PIXI.Graphics();
-        this.app.stage.addChild(this._graphics);
+        this._app.stage.addChild(this._graphics);
 
-        this.app.ticker.add(() => {
+        this._app.ticker.add(() => {
 
             // Limit to the frame rate
             let timeNow = (new Date()).getTime();
-            let timeDiff = timeNow - this.g_Time;
-            if (timeDiff < this.g_TICK) {
+            let timeDiff = timeNow - this._tickTime;
+            if (timeDiff < this._tickLen) {
                 return;
             }
-            this.g_Time = timeNow;
+            this._tickTime = timeNow;
 
             this.tick();
         });
 
         window.onresize = () => this.resize();
+        elem.onmousedown = () => this.resize();
+        setInterval(() => this.resize(), 20000);
     };
 
     this.paint = function () {
@@ -103,8 +100,8 @@ function Grid(cellSize, tickLen) {
 
                 cells[color].forEach(d => this._graphics
                     .drawRect(
-                        this.xCoordsMap[d],
-                        this.yCoordsMap[d],
+                        this._xCoordsMap[d],
+                        this._yCoordsMap[d],
                         this._cellSize,
                         this._cellSize
                     )
@@ -127,7 +124,7 @@ function Grid(cellSize, tickLen) {
 
         for (let i = 0; i < this._cellCount; i++) {
 
-            let x = this.xMap[i];
+            let x = this._xMap[i];
 
             if (i < xw) {
                 if (i === 0) {
@@ -207,31 +204,12 @@ function Grid(cellSize, tickLen) {
 
     this.getColor = (cell) => {
         if (this._cells[cell] === 2) {
-            return this.c1;
+            return this._c1;
         } else if (this._cells[cell] === 4) {
-            return this.c2;
+            return this._c2;
         }
-        return this.c3;
+        return this._c3;
     };
-
-    // this.computeState_ = (state, neighbors) => {
-    //
-    //     let liveNeighbors = 0;
-    //     for (let i = 0; i < 8; i++) {
-    //         if (neighbors[i] === 1) {
-    //             liveNeighbors++;
-    //         }
-    //     }
-    //
-    //     if (state === 1) {
-    //         if (liveNeighbors < 2 || liveNeighbors > 3) {
-    //             return 0;
-    //         }
-    //     } else if (liveNeighbors === 3) {
-    //         return 1;
-    //     }
-    //     return state;
-    // };
 
     this.computeState = (state, neighbors) => {
 
