@@ -32,8 +32,9 @@ export default {
     },
     mounted() {
         let grid = new Grid(
-            size ? size : window.innerWidth < 1000 ? 20 : 30,
+            size ? size : window.innerWidth < 1000 ? 15 : 25,
             window.innerWidth < 1000 ? 80 : 40,
+            // darkTheme
             lightTheme
         );
         grid.setup();
