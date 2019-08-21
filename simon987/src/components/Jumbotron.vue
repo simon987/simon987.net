@@ -1,52 +1,33 @@
 <template>
     <div id="content" class="md-layout">
-        <md-card class="md-layout-item md-elevation-10 md-size-90">
+        <md-card class="md-layout-item md-elevation-10 main-card">
             <md-card-header>
-                <span class="md-display-3 text-mono">simon987.net<span class="vim-caret">_</span></span>
+                <md-card-header-text>
+                    <span class="md-display-3 text-mono">simon987.net<span class="vim-caret">_</span></span>
+                </md-card-header-text>
             </md-card-header>
 
             <md-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed
-                accusantium quasi non.
+<!--                - Software engineering student-->
+<!--                - Open source zealot-->
+<!--                - Data archival hobbyist-->
             </md-card-content>
 
             <div class="sections">
-                <md-empty-state
-                    md-rounded
-                    md-icon="code"
-                    md-label="Code"
-                    md-description="Placeholder text">
-                </md-empty-state>
+                <md-button to="/code" class="md-raised big-button">
+                    <md-icon class="md-accent">code</md-icon> Code
+                    <div class="desc">Projects portfolio</div>
+                </md-button>
 
-                <md-empty-state
-                    md-rounded
-                    md-icon="edit"
-                    md-label="Blog"
-                    md-description="Placeholder text">
-                </md-empty-state>
-            </div>
+                <md-button to="/" class="md-raised big-button">
+                    <md-icon class="md-accent">edit</md-icon> Blog
+                    <div class="desc">Placeholder text</div>
+                </md-button>
 
-            <div class="sections-small">
-                <md-card md-with-hover>
-                    <md-ripple>
-                        <md-card-header><span class="md-title"><md-icon>code</md-icon>Code</span></md-card-header>
-                        <md-card-content>Placeholder text</md-card-content>
-                    </md-ripple>
-                </md-card>
-
-                <md-card md-with-hover>
-                    <md-ripple>
-                        <md-card-header><span class="md-title"><md-icon>edit</md-icon>Blog</span></md-card-header>
-                        <md-card-content>Placeholder text</md-card-content>
-                    </md-ripple>
-                </md-card>
-
-                <md-card md-with-hover>
-                    <md-ripple>
-                        <md-card-header><span class="md-title"><md-icon>email</md-icon>Contact</span></md-card-header>
-                        <md-card-content>Placeholder text</md-card-content>
-                    </md-ripple>
-                </md-card>
+                <md-button to="/" class="md-raised big-button">
+                    <md-icon class="md-accent">email</md-icon> Contact
+                    <div class="desc">Placeholder text</div>
+                </md-button>
             </div>
         </md-card>
     </div>
@@ -64,10 +45,8 @@ export default {
         margin: 2em;
         max-width: 1200px;
         min-width: inherit;
-    }
 
-    .md-card .md-ripple {
-        padding: 0 1em;
+        padding: 2rem;
     }
 
     .text-mono {
@@ -135,19 +114,8 @@ export default {
         }
     }
 
-    .md-empty-state {
-        display: inline-block;
-        margin-left: 16px;
-        margin-top: 1em;
-        margin-bottom: 2em;
-    }
-
     .sections {
         text-align: center;
-    }
-
-    .sections-small .md-card {
-        background-color: rgba(58, 59, 82, 0.08);
     }
 
     .md-layout-item {
@@ -159,40 +127,24 @@ export default {
         font-weight: bold;
     }
 
-    @media screen and (max-width: 972px) {
-        .md-display-3 {
-            font-size: 42px;
-        }
-
-        .sections {
-            display: none;
-        }
-
-        .sections-small {
-            display: inherit;
-        }
+    .main-card {
+        padding: 1rem 2rem 2rem 2rem;
     }
 
-    @media screen and (min-width: 972px) {
-        .sections-small {
-            display: none;
-        }
+    .big-button {
+        height: 110px;
+        width: 100%;
     }
 
-    .md-empty-state.md-theme-default.md-rounded {
-        background-color: rgba(58, 59, 82, 0.08);
+    .desc {
+        opacity: 0.8;
+        font-weight: normal;
+        text-transform: none;
     }
 
-    .md-empty-state:hover {
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 6px 6px -3px rgba(0, 0, 0, .2), 0 10px 14px 1px rgba(0, 0, 0, .14), 0 4px 18px 3px rgba(0, 0, 0, .12);
-    }
-
-</style>
-<style>
-    .md-empty-state:hover .md-empty-state-icon {
-        color: #FF5252 !important;
-        transition: 0.1s;
+    .md-button {
+        margin-left: 0;
     }
 </style>
+
+

@@ -1,11 +1,9 @@
 import * as PIXI from 'pixi.js'
 import * as _ from 'lodash'
 
-function Grid(cellSize, tickLen, colScheme) {
+function Grid(cellSize, tickLen, themes) {
 
-    this._c1 = colScheme.c1;
-    this._c2 = colScheme.c2;
-    this._c3 = colScheme.c3;
+    let lastTheme = -1;
 
     this.seed = function () {
         this._cells = new Uint8Array(this._cellCount).map(() => {
@@ -19,7 +17,29 @@ function Grid(cellSize, tickLen, colScheme) {
         });
     };
 
+    this.getTheme = function () {
+        if (lastTheme === -1) {
+            lastTheme = 0;
+            return lastTheme;
+        } else {
+            let theme;
+            do {
+                theme = Math.floor(Math.random() * themes.length);
+            } while (theme === lastTheme);
+            lastTheme = theme;
+            return theme;
+        }
+    };
+
+    this.setRandomColorSchemes = function() {
+        let theme = themes[this.getTheme()];
+        this._c1 = theme.c1;
+        this._c2 = theme.c2;
+        this._c3 = theme.c3;
+    };
+
     this.resize = function () {
+        this.setRandomColorSchemes();
         this._pxWidth = window.innerWidth;
         this._pxHeight = window.innerHeight;
 

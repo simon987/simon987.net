@@ -1,7 +1,7 @@
 {
     "name": "simon987.net",
-    "version": "1.0.0",
-    "description": "A Vue.js project",
+    "version": "1.2.0",
+    "description": "My personal website",
     "author": "simon987 <me@simon987.net>",
     "private": true,
     "scripts": {
@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "d3": "^5.9.2",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.15",
         "pixi.js": "^4.8.7",
         "vue": "^2.6.10",
         "vue-material": "^1.0.0-beta-11",

@@ -9,17 +9,48 @@
 import Grid from '../Grid';
 import Jumbotron from "./Jumbotron";
 
-let lightTheme = {
-    c1: 0xf9989f,
-    c2: 0xfccb8f,
-    c3: 0xc5f8c8
-};
-
-let darkTheme = {
-    c1: 0x3a3b52,
-    c2: 0x33284b,
-    c3: 0x2c2332
-};
+let themes = [
+    {
+        c1: 0xf9989f,
+        c2: 0xfccb8f,
+        c3: 0xc5f8c8
+    },
+    {
+        c1: 0x3a3b52,
+        c2: 0x33284b,
+        c3: 0x2c2332
+    },
+    {
+        c1: 0x547d59,
+        c2: 0xa0b97b,
+        c3: 0xbdc17c
+    },
+    {
+        c1: 0xd9bf68,
+        c2: 0xe05b7c,
+        c3: 0x811143
+    },
+    {
+        c1: 0x70ce9a,
+        c2: 0xf2f1c7,
+        c3: 0xc15b41
+    },
+    {
+        c1: 0xEAEBD7,
+        c2: 0x74645F,
+        c3: 0xF3876A
+    },
+    {
+        c1: 0xADBCB9,
+        c2: 0xC184E9,
+        c3: 0xD8C5C3
+    },
+    {
+        c1: 0xFA520B,
+        c2: 0xFCB20C,
+        c3: 0xE5E113
+    },
+];
 
 const urlParams = new URLSearchParams(window.location.search);
 const size = urlParams.get('size');
@@ -34,8 +65,7 @@ export default {
         let grid = new Grid(
             size ? size : window.innerWidth < 1000 ? 15 : 25,
             window.innerWidth < 1000 ? 80 : 40,
-            // darkTheme
-            lightTheme
+            themes
         );
         grid.setup();
         grid.resize();

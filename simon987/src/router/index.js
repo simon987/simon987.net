@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Grid from '../components/Grid'
-import Jumbotron from "../components/Jumbotron";
+import Code from "../components/Code";
 
 Vue.use(Router);
 
 export default new Router({
+    mode: 'history',
     routes: [
         {
             path: '/',
@@ -13,9 +14,9 @@ export default new Router({
             component: Grid
         },
         {
-            path: '/j',
-            name: 'Jumbotron',
-            component: Jumbotron
+            path: '/code',
+            name: 'Code',
+            component: Code
         }
     ]
 })
