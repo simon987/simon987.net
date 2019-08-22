@@ -10,7 +10,6 @@
         "build": "node build/build.js"
     },
     "dependencies": {
-        "d3": "^5.9.2",
         "lodash": "^4.17.15",
         "pixi.js": "^4.8.7",
         "vue": "^2.6.10",

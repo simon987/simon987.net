@@ -49,6 +49,16 @@ export default {
         padding: 2rem;
     }
 
+    @media screen and (max-width: 1250px) {
+        .md-card {
+            max-width: 90%;
+        }
+
+        .md-display-3 {
+            font-size: 30px;
+        }
+    }
+
     .text-mono {
         font-family: Hack, "Andale Mono", monospace;
         /*color: rgba(0, 0, 0, 0.87);*/

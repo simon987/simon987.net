@@ -18,31 +18,13 @@
             </md-card-media>
         </md-card-header>
 
-
-        <md-card-expand>
-            <md-card-actions md-alignment="space-between">
-                <div>
-                    <a v-for="link in this.links" :href="Object.values(link)[0]" target="_blank">
-                        <md-button >{{Object.keys(link)[0]}}</md-button>
-                    </a>
-                </div>
-
-                <md-card-expand-trigger>
-                    <md-button class="md-icon-button">
-                        <md-icon>keyboard_arrow_down</md-icon>
-                    </md-button>
-                </md-card-expand-trigger>
-            </md-card-actions>
-
-            <md-card-expand-content>
-                <md-card-content>
-                    Lorem ipsum dolor si2t amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores,
-                    sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint.
-                    Excepturi.
-                </md-card-content>
-            </md-card-expand-content>
-        </md-card-expand>
-
+        <md-card-actions md-alignment="space-between">
+            <div>
+                <a v-for="link in this.links" :href="Object.values(link)[0]" target="_blank">
+                    <md-button>{{Object.keys(link)[0]}}</md-button>
+                </a>
+            </div>
+        </md-card-actions>
     </md-card>
 </template>
 

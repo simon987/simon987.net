@@ -20,7 +20,6 @@
                 media="/static/cubot.png"
             />
 
-            <!-- TODO: demo website -->
             <Project
                 name="Simple Incremental Search Tool"
                 date="[2018-01]"
@@ -215,6 +214,36 @@ export default {
         margin: 2em;
         max-width: 1200px;
         min-width: inherit;
+    }
+
+
+    @media screen and (max-width: 1250px) {
+
+        @media screen and (min-width: 600px) {
+            .md-layout > .md-card {
+                margin-top: 3.5rem;
+                max-width: 90%;
+            }
+        }
+
+        .md-layout > .md-card {
+            max-width: 100%;
+            margin: 0;
+            padding-top: 3rem;
+        }
+
+        .md-layout > .md-card > .md-card-header {
+            padding-left: 2rem;
+        }
+
+        .md-layout > .md-card > .md-card-content {
+            padding-left: 2rem;
+        }
+
+        .md-fab {
+            left: 5px;
+            top: 5px;
+        }
     }
 
     .md-layout-item {

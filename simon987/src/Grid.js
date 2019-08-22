@@ -96,7 +96,7 @@ function Grid(cellSize, tickLen, themes) {
         });
 
         window.onresize = () => this.resize();
-        elem.onmousedown = () => this.resize();
+        elem.onclick = () => this.resize();
         setInterval(() => this.resize(), 20000);
     };
 

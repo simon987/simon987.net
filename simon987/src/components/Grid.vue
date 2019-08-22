@@ -16,11 +16,6 @@ let themes = [
         c3: 0xc5f8c8
     },
     {
-        c1: 0x3a3b52,
-        c2: 0x33284b,
-        c3: 0x2c2332
-    },
-    {
         c1: 0x547d59,
         c2: 0xa0b97b,
         c3: 0xbdc17c
@@ -49,6 +44,11 @@ let themes = [
         c1: 0xFA520B,
         c2: 0xFCB20C,
         c3: 0xE5E113
+    },
+    {
+        c1: 0xF97F0D,
+        c2: 0xFE0B98,
+        c3: 0x2AADD4
     },
 ];
 
