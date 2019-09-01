@@ -4,6 +4,7 @@
             <md-card-header-text>
                 <div class="md-title">
                     <md-icon v-if="this.fork" md-src="/static/fork.svg"></md-icon>
+                    <md-icon v-if="this.featured">star</md-icon>
                     {{this.name}}
                     <TechChip :name="tech" :key="tech" v-for="tech in this.techs"/>
                 </div>
@@ -43,6 +44,10 @@ export default {
         techs: Array,
         links: Array,
         fork: {
+            default: false,
+            type: Boolean
+        },
+        featured: {
             default: false,
             type: Boolean
         }

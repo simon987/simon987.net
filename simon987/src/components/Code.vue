@@ -18,7 +18,46 @@
                 :techs="['Java', 'Pixi.js', 'Typescript', 'MongoDB', 'x86-16 ASM']"
                 :links="[{github: 'https://github.com/simon987/Much-Assembly-Required'}, {website:'https://muchassemblyrequired.com'}]"
                 media="/static/cubot.png"
+                featured
             />
+
+            <Project
+                name="task_tracker"
+                date="[2019-02]"
+                description="Fast task tracker (job queue) with authentication, statistics and web frontend"
+                :techs="['Go', 'PostgreSQL', 'Angular', 'Test-Driven']"
+                :links="[{github: 'https://github.com/simon987/task_tracker'}, {demo:'https://tt.simon987.net'}]"
+                media="/static/tt.png"
+                featured
+            />
+
+            <Project
+                name="Music graph (API & UI)"
+                date="[2019-04]"
+                description="Massive Web scraping project that attempts to aggregate raw information from
+                 Musicbrainz, Last.fm, Spotify and Cover Art Archive to generate an interactive map of music-related data.
+                 Uses a graph-database as its core and allows subsecond searching through tens of millions of relationships
+                 with its mobile-friendly interface"
+                :techs="['D3.js', 'Graph Database', 'Vue.js', 'Python', 'Bash', 'Java']"
+                :links="[{'github (ui)': 'https://github.com/simon987/music-graph-ui'}, {'github (api)': 'https://github.com/simon987/music-graph-api'}, {website: 'https://mg.simon987.net'}]"
+                media="/static/mg.png"
+                featured
+            />
+
+            <Project
+                name="irarchives"
+                date="[2019-05]"
+                description="Large scale reverse image and video search for reddit.
+                 This project is a massive rewrite & refactor of the now defunct i.rarchives.com website.
+                 It uses a combination of real-time ingesting using reddit_feed and historical
+                 archival from Pushshift. Several optimizations have been implemented to allow parametrised
+                 image and video search possible among its large dataset (See pg_hamming)."
+                :techs="['Python', 'PostgreSQL', 'Javascript']"
+                :links="[{'github': 'https://github.com/simon987/irarchives'}]"
+                media="/static/irar.png"
+                featured
+            />
+
 
             <Project
                 name="Simple Incremental Search Tool"
@@ -48,15 +87,6 @@
             />
 
             <Project
-                name="task_tracker"
-                date="[2019-02]"
-                description="Fast task tracker (job queue) with authentication, statistics and web frontend"
-                :techs="['Go', 'PostgreSQL', 'Angular', 'Test-Driven']"
-                :links="[{github: 'https://github.com/simon987/task_tracker'}, {demo:'https://tt.simon987.net'}]"
-                media="/static/tt.png"
-            />
-
-            <Project
                 name="task_tracker_drone"
                 date="[2019-03]"
                 description="General purpose 'set and forget' task runner and client library for task_tracker"
@@ -75,18 +105,6 @@
             />
 
             <Project
-                name="Music graph (API & UI)"
-                date="[2019-04]"
-                description="Massive Web scraping project that attempts to aggregate raw information from
-                 Musicbrainz, Last.fm, Spotify and Cover Art Archive to generate an interactive map of music-related data.
-                 Uses a graph-database as its core and allows subsecond searching through tens of millions of relationships
-                 with its mobile-friendly interface"
-                :techs="['D3.js', 'Graph Database', 'Vue.js', 'Python', 'Bash', 'Java']"
-                :links="[{'github (ui)': 'https://github.com/simon987/music-graph-ui'}, {'github (api)': 'https://github.com/simon987/music-graph-api'}, {website: 'https://mg.simon987.net'}]"
-                media="/static/mg.png"
-            />
-
-            <Project
                 name="DataArchivist.net"
                 date="[2019-04]"
                 description="Personal data archival blog"
@@ -102,19 +120,6 @@
                 :techs="['Pixi.js', 'Vue.js']"
                 :links="[{'github': 'https://github.com/simon987/simon987.net'}, {website: 'https://simon987.net'}]"
                 media="/static/net.png"
-            />
-
-            <Project
-                name="irarchives"
-                date="[2019-05]"
-                description="Large scale reverse image and video search for reddit.
-                 This project is a massive rewrite & refactor of the now defunct i.rarchives.com website.
-                 It uses a combination of real-time ingesting using reddit_feed and historical
-                 archival from Pushshift. Several optimizations have been implemented to allow parametrised
-                 image and video search possible among its large dataset (See pg_hamming)."
-                :techs="['Python', 'PostgreSQL', 'Javascript']"
-                :links="[{'github': 'https://github.com/simon987/irarchives'}]"
-                media="/static/irar.png"
             />
 
             <Project
