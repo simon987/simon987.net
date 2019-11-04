@@ -11,6 +11,11 @@ import Jumbotron from "./Jumbotron";
 
 let themes = [
     {
+        c1: 0xFA520B,
+        c2: 0xFCB20C,
+        c3: 0xE5E113
+    },
+    {
         c1: 0xf9989f,
         c2: 0xfccb8f,
         c3: 0xc5f8c8
@@ -39,11 +44,6 @@ let themes = [
         c1: 0xADBCB9,
         c2: 0xC184E9,
         c3: 0xD8C5C3
-    },
-    {
-        c1: 0xFA520B,
-        c2: 0xFCB20C,
-        c3: 0xE5E113
     },
     {
         c1: 0xF97F0D,

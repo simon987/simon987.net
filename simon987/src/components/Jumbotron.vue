@@ -8,25 +8,23 @@
             </md-card-header>
 
             <md-card-content>
-<!--                - Software engineering student-->
-<!--                - Open source zealot-->
-<!--                - Data archival hobbyist-->
+                Software engineering student, open source zealot, data archival hobbyist
             </md-card-content>
 
             <div class="sections">
                 <md-button to="/code" class="md-raised big-button">
                     <md-icon class="md-accent">code</md-icon> Code
-                    <div class="desc">Projects portfolio</div>
+                    <div class="desc">Projects showcase</div>
                 </md-button>
 
-                <md-button to="/" class="md-raised big-button">
+                <md-button href="https://dataarchivist.net" target="_blank" class="md-raised big-button">
                     <md-icon class="md-accent">edit</md-icon> Blog
-                    <div class="desc">Placeholder text</div>
+                    <div class="desc">Personal tech blog</div>
                 </md-button>
 
-                <md-button to="/" class="md-raised big-button">
+                <md-button to="/contact" class="md-raised big-button">
                     <md-icon class="md-accent">email</md-icon> Contact
-                    <div class="desc">Placeholder text</div>
+                    <div class="desc">Contact page</div>
                 </md-button>
             </div>
         </md-card>

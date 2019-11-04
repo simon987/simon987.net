@@ -1,16 +1,17 @@
 <template>
-    <md-card>
+    <md-card :class="{archived: archived}">
         <md-card-header>
             <md-card-header-text>
                 <div class="md-title">
-                    <md-icon v-if="this.fork" md-src="/static/fork.svg"></md-icon>
-                    <md-icon v-if="this.featured">star</md-icon>
+                    <md-icon v-if="this.fork" md-src="/static/fork.svg"/>
+                    <md-icon v-if="this.featured" class="featured">star</md-icon>
                     {{this.name}}
+                    <span class="muted" v-if="this.archived">(archived)</span>
                     <TechChip :name="tech" :key="tech" v-for="tech in this.techs"/>
                 </div>
                 <div class="md-subhead">
-                    <span class="muted">{{this.date}}</span>
-                    {{this.description}}
+                    <span class="date">{{this.date}}</span>
+                    <span v-html="this.description"/>
                 </div>
             </md-card-header-text>
 
@@ -50,6 +51,10 @@ export default {
         featured: {
             default: false,
             type: Boolean
+        },
+        archived: {
+            default: false,
+            type: Boolean
         }
     }
 }
@@ -65,9 +70,13 @@ export default {
         display: inline-block;
     }
 
-    .muted {
+    .date {
         color: #9e9e9e;
         font-weight: bold;
+    }
+
+    .muted {
+        color: #9e9e9e;
     }
 
     .md-subhead {
@@ -84,5 +93,13 @@ export default {
         .md-card-media {
             display: none;
         }
+    }
+
+    .archived {
+        background-color: #EEEEEE;
+    }
+
+    .featured {
+        color: #FB8C00 !important;
     }
 </style>
