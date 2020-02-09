@@ -22,6 +22,11 @@
                     <div class="desc">Personal tech blog</div>
                 </md-button>
 
+                <md-button href="https://status.simon987.net" class="md-raised big-button">
+                    <md-icon class="md-accent">signal_cellular_alt</md-icon> Status
+                    <div class="desc">Services status page</div>
+                </md-button>
+
                 <md-button to="/contact" class="md-raised big-button">
                     <md-icon class="md-accent">email</md-icon> Contact
                     <div class="desc">Contact page</div>
