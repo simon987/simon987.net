@@ -127,6 +127,15 @@
 <!--            />-->
 
             <Project
+                name="status"
+                date="[2020-02]"
+                description="Minimalist status page for HTTP services."
+                :techs="['Scala', 'Akka', 'H2']"
+                :links="[{github: 'https://github.com/simon987/status'}, {demo:'https://status.simon987.net'}]"
+                media="/static/status.png"
+            />
+
+            <Project
                 name="Architeuthis"
                 date="[2019-05]"
                 description="MITM HTTP(S) proxy with integrated load-balancing, rate-limiting and error handling.

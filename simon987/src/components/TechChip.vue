@@ -14,12 +14,12 @@ export default {
         background: #3572A5;
         color: white;
     }
-    
+
     .go {
         background: #00ADD8;
         color: white;
     }
-    
+
     .java {
         background: #b07219;
         color: white;
@@ -34,7 +34,7 @@ export default {
         background: #589636;
         color: white;
     }
-    
+
     .x86-16asm {
         background: #6E4C13;
         color: white;
@@ -117,6 +117,21 @@ export default {
 
     .graphdatabase {
         background: #63B543;
+        color: white;
+    }
+
+    .scala {
+        background: #c22d40;
+        color: white;
+    }
+
+    .h2 {
+        background: #0000BB;
+        color: white;
+    }
+
+    .akka {
+        background: #15A9CE;
         color: white;
     }
 </style>
