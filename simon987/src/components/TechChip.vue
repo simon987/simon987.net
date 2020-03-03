@@ -134,6 +134,11 @@ export default {
         background: #15A9CE;
         color: white;
     }
+
+    .nginx {
+        background: #01963A;
+        color: white;
+    }
 </style>
 
 

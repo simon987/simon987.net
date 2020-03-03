@@ -136,6 +136,16 @@
             />
 
             <Project
+                name="ngx_http_js_challenge_module"
+                date="[2020-03]"
+                description="Simple javascript proof-of-work based access for Nginx with virtually no overhead.
+                 (Similar to Cloudflare's anti-DDoS feature)"
+                :techs="['C', 'Nginx']"
+                :links="[{github: 'https://github.com/simon987/ngx_http_js_challenge_module'}, {demo: 'https://ngx-js-demo.simon987.net/'}]"
+                media="/static/nginx.png"
+            />
+
+            <Project
                 name="Architeuthis"
                 date="[2019-05]"
                 description="MITM HTTP(S) proxy with integrated load-balancing, rate-limiting and error handling.
