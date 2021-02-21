@@ -8,4 +8,7 @@ RUN npm run build
 
 FROM nginx:alpine
 
-COPY --from=build /app/dist/ /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY ./gpg /www/gpg/
+COPY ./keybase /www/keybase/
+COPY --from=build /app/dist/ /www/

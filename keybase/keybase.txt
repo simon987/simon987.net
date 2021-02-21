@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/hexcube
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://simon987.net
+  * I am hexcube (https://keybase.io/hexcube) on keybase.
+  * I have a public key ASD6lQ-L5IaMQazQFkmsjb79YSnnfy0-ajuCknBNcd9h2Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204253a32d175aee0bf3146ce22c3fb82ce3fbad51a3730077b323b67b0d9637b30a",
+      "host": "keybase.io",
+      "kid": "0120fa950f8be4868c41acd01649ac8dbefd6129e77f2d3e6a3b8292704d71df61d80a",
+      "uid": "924ad3d3adea6574298bfb48661d0319",
+      "username": "hexcube"
+    },
+    "merkle_root": {
+      "ctime": 1606929502,
+      "hash": "657ac1cbd3cb80b8a491f8a5917320cc45acfb3aef7160b145ccb62320a1ae546f3532e514908ac0cf9b36ffb64ee569b6e2c7f2b8f894cf90b4018d9ca50dd8",
+      "hash_meta": "c1ec196872910e19eacdd0a5d4d8596479940c187ac9bd5782953e6ee7ce8922",
+      "seqno": 18290718
+    },
+    "service": {
+      "entropy": "FUlB32rJkgQCYq7VuXGq/2g8",
+      "hostname": "simon987.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.1"
+  },
+  "ctime": 1606929522,
+  "expire_in": 504576000,
+  "prev": "0d60eeb2ac76d442d7720dcc73caddf0457f4d74c7a4cec2d8ff78ba2981683c",
+  "seqno": 19,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+pUPi+SGjEGs0BZJrI2+/WEp538tPmo7gpJwTXHfYdgKp3BheWxvYWTESpcCE8QgDWDusqx21ELXcg3Mc8rd8EV/TXTHpM7C2P94uimBaDzEIHEeaUjECFkr8z7I/kPhWwt6FxYbcpIoDW/2xVJ8rNCNAgHCo3NpZ8RAGyYWcwaoFsEbeQOQn5z7cwO+7ILQVbbBq2QW1X0VDVE/1Oj624m23U38NlbqaQlRJXh5Qw/aubnu2Yz1RX8HBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILl6oyX4zu/vhDuPrPC7WbRunBNMFwxDpUyquB+Ey4Mno3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hexcube
+
+==================================================================
